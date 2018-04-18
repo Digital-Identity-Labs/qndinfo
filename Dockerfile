@@ -13,4 +13,4 @@ COPY source/qndinfo.conf  /etc/apache2/conf.d/
 USER root
 EXPOSE 80 443
 
-ENTRYPOINT httpd -f /etc/apache2/httpd.conf -DFOREGROUND
+ENTRYPOINT sleep 2 && httpd -f /etc/apache2/httpd.conf -DFOREGROUND
