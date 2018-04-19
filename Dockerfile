@@ -1,7 +1,7 @@
 FROM alpine:3.7
 
 LABEL description="A quick and crude way to debug reverse proxies using PHPInfo" \
-      version="0.2.0" \
+      version="0.2.1" \
       maintainer="pete@digitalidentitylabs.com"
 
 RUN  apk add --update --no-cache \
@@ -21,4 +21,4 @@ EXPOSE 80
 
 ENTRYPOINT sleep 3 && httpd -f /etc/apache2/httpd.conf -DFOREGROUND
 
-HEALTHCHECK --interval=10s --timeout=3s CMD curl -f http://localhost:8080/anything_at_all || exit 1
+HEALTHCHECK --interval=10s --timeout=3s CMD curl -f http://localhost:80/anything_at_all || exit 1
