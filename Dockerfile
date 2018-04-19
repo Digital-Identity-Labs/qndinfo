@@ -1,7 +1,7 @@
 FROM alpine:3.7
 
 LABEL description="A quick and crude way to debug reverse proxies using PHPInfo" \
-      version="0.1.0" \
+      version="0.2.0" \
       maintainer="pete@digitalidentitylabs.com"
 
 RUN  apk add --update --no-cache \
